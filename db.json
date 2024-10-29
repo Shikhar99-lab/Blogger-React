@@ -1,0 +1,44 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "tag": "React, JavaScript, UI",
+      "excerpt": "React is a powerful JavaScript library for building dynamic web interfaces...",
+      "image": "blog_img1.jpg",
+      "author": "John Doe",
+      "date": "2024-10-20"
+    },
+    {
+      "id": 2,
+      "title": "Understanding State and Props",
+      "desc": "Learn the differences between state and props in React and how to use them effectively.",
+      "tag": "React, JavaScript, State, Props",
+      "excerpt": "State and props are key concepts in React that allow you to manage data...",
+      "image": "https://via.placeholder.com/150",
+      "author": "Jane Smith",
+      "date": "2024-10-21"
+    },
+    {
+      "id": 3,
+      "title": "React Component Lifecycle",
+      "desc": "Explore the lifecycle methods of React components and how they work behind the scenes.",
+      "tag": "React, JavaScript, Lifecycle",
+      "excerpt": "React component lifecycle methods allow you to control how a component renders...",
+      "image": "https://via.placeholder.com/150",
+      "author": "Alex Johnson",
+      "date": "2024-10-22"
+    },
+    {
+      "id": 4,
+      "title": "Building Forms in React",
+      "desc": "A guide to creating and managing forms in React with controlled and uncontrolled components.",
+      "tag": "React, JavaScript, Forms",
+      "excerpt": "Handling forms in React requires a good understanding of controlled vs uncontrolled components...",
+      "image": "https://via.placeholder.com/150",
+      "author": "Emily Clark",
+      "date": "2024-10-23"
+    }
+  ]
+}

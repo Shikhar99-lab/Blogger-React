@@ -33,7 +33,7 @@ function Search() {
                 </div>
                 <div className='flex gap-10 justify-center mt-5'>
                     {tags.map((item, index) => (
-                        <ul onClick={() => setActiveIndex(index)} className={`${index == activeIndex ? 'font-bold bg-blue-500 text-white rounded-full p-3 cursor-pointer' : 'hover:font-bold hover:bg-blue-500 hover:text-white hover:rounded-full p-3 cursor-pointer transition-all duration-300 ease-in-out'}}`}>
+                        <ul key={index} onClick={() => setActiveIndex(index)} className={`${index == activeIndex ? 'font-bold bg-blue-500 text-white rounded-full p-3 cursor-pointer' : 'hover:font-bold hover:bg-blue-500 hover:text-white hover:rounded-full p-3 cursor-pointer transition-all duration-300 ease-in-out'}}`}>
                             <li>{item.name}</li>
                         </ul>
                     ))}
