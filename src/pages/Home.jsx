@@ -8,19 +8,20 @@ import axios from 'axios';
 
 function Home() {
     const [firstPost, setFirstPost] = useState(null);
-
+    const [posts, setPosts] = useState([]); 
     useEffect(() => {
-        const fetchFirstPost = async () => {
+        const fetchAllPosts = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/blogs');
+                const response = await axios.get('http://localhost:5000/blogs'); 
+                setPosts(response.data); 
                 if (response.data.length > 0) {
-                    setFirstPost(response.data[0]);
+                    setFirstPost(response.data[0]); 
                 }
             } catch (error) {
-                console.error('Error fetching the first post:', error);
+                console.error('Error fetching the posts:', error);
             }
         };
-        fetchFirstPost();
+        fetchAllPosts();
     }, []);
 
     return (
@@ -28,10 +29,10 @@ function Home() {
             <Header />
             <Search />
             {firstPost && <IntroPost post={firstPost} />}
-            {/* <Blogs />
-            <Footer /> */}
+            <Blogs posts={posts} /> 
+            <Footer />
         </div>
     );
-}
+} 
 
 export default Home;
