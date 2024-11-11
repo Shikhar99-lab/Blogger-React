@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Blogs({ posts }) {
@@ -32,7 +32,7 @@ function Blogs({ posts }) {
             />
             <h3 className="text-red-500 mt-3">{item.tag}</h3>
             <h3 className="font-bold mt-3">{item.title}</h3>
-            <h3 className="line-clamp-3 text-gray-400 mt-3">{item.desc}</h3>
+            <h3 className="line-clamp-3 text-gray-400 mt-3">{item.excerpt}</h3>
             <div className="flex items-center mt-5">
               <img
                 src="https://courses.tubeguruji.com/static/media/logo.8f2db318fe31ffaf5793.png"
