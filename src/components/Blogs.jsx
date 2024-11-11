@@ -25,11 +25,10 @@ function Blogs({ posts }) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 px-10 md:px-15 lg:px-32">
         {filteredPosts.map((item) => (
-          <div key={item.id} className="m-4 cursor-pointer" onClick={() => navigate('blog-detail/' + item.id)}>
-            <img
-              src={item.image.startsWith('http') ? item.image : `${basePath}${item.image}`}
-              className="w-full rounded-2xl object-cover h-[200px]"
-            />
+          <div key={item.id} className="m-4 cursor-pointer" onClick={() => navigate(`/blog-detail/${item.id}`)}>            <img
+            src={item.image.startsWith('http') ? item.image : `${basePath}${item.image}`}
+            className="w-full rounded-2xl object-cover h-[200px]"
+          />
             <h3 className="text-red-500 mt-3">{item.tag}</h3>
             <h3 className="font-bold mt-3">{item.title}</h3>
             <h3 className="line-clamp-3 text-gray-400 mt-3">{item.excerpt}</h3>
