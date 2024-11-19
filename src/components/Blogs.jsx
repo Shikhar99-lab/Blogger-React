@@ -38,7 +38,7 @@ function Blogs({ posts }) {
                 className="w-[35px] rounded-full"
               />
               <div className="ml-2">
-                <h3 className="font-bold text-[12px]">Tubeguruji</h3>
+                <h3 className="font-bold text-[12px]">Shikhar Shukla</h3>
                 <h3 className="text-gray-500 text-[10px]">24 Sept 2024</h3>
               </div>
             </div>

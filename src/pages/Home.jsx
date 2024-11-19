@@ -8,14 +8,14 @@ function Home() {
     const [firstPost, setFirstPost] = useState(null);
     const [posts, setPosts] = useState([]);
     const [filteredPosts, setFilteredPosts] = useState([]);
-    const [searchQuery, setSearchQuery] = useState("");
+    const [setSearchQuery] = useState("");
 
     useEffect(() => {
         const fetchAllPosts = async () => {
             try {
                 const response = await axios.get('http://localhost:3000/blogs');
                 setPosts(response.data);
-                setFilteredPosts(response.data);  // Initially show all posts
+                setFilteredPosts(response.data); 
                 if (response.data.length > 0) {
                     setFirstPost(response.data[0]);
                 }
@@ -35,7 +35,7 @@ function Home() {
             );
             setFilteredPosts(filtered);
         } else {
-            setFilteredPosts(posts);  // Show all posts if no search query
+            setFilteredPosts(posts); 
         }
     };
 

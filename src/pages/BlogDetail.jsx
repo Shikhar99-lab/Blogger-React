@@ -3,21 +3,21 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function BlogDetail() {
-  const { id } = useParams(); // Get the blog ID from the URL
+  const { id } = useParams();
   const [post, setPost] = useState(null);
   const basePath = '/src/assets/';
 
   useEffect(() => {
-    console.log("Blog ID from URL:", id);  // Log the ID from the URL
+    console.log("Blog ID from URL:", id); 
 
     const fetchPostById = async () => {
       try {
         const response = await axios.get('http://localhost:3000/blogs');
-        console.log("Fetched blogs data:", response.data); // Log the entire response data
+        console.log("Fetched blogs data:", response.data);
 
-        // Ensure ID consistency by converting both to strings
+        
         const foundPost = response.data.find(post => post.id === id.toString());
-        console.log("Found post:", foundPost); // Log the found post
+        console.log("Found post:", foundPost); 
 
         if (foundPost) {
           setPost(foundPost);
@@ -33,7 +33,7 @@ function BlogDetail() {
   }, [id]);
 
   if (!post) {
-    return <p>Loading...</p>; // Show loading state while post is being fetched
+    return <p>Loading...</p>;
   }
 
   return (
@@ -47,7 +47,7 @@ function BlogDetail() {
           alt="Author"
         />
         <div className='ml-2'>
-          <h3 className='font-bold text-[12px]'>Tubeguruji</h3>
+          <h3 className='font-bold text-[12px]'>Shikhar Shukla</h3>
           <h3 className='text-gray-500 text-[10px]'>24 Sept 2024</h3>
         </div>
       </div>

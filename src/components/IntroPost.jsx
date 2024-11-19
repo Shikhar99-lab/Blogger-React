@@ -26,7 +26,7 @@ function IntroPost({ post }) {
             alt="Author"
           />
           <div className='ml-2'>
-            <h3 className='font-bold'>Tubeguruji</h3>
+            <h3 className='font-bold'>Shikhar Shukla</h3>
             <h3 className='text-gray-500'>{post.date}</h3>
           </div>
         </div>
